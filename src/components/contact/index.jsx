@@ -2,11 +2,12 @@ import { LiaLaptopCodeSolid } from "react-icons/lia"
 import { AiFillLinkedin } from "react-icons/ai"
 import { AiOutlineMail } from "react-icons/ai"
 import { AiOutlineWhatsApp } from "react-icons/ai"
+import Title from "../title"
 
 export default function Contact() {
     return (
         <section className="text-center mb-10 ">
-            <h2 className="text-purple-900 mb-10 text-2xl font-bold">Contatos</h2>
+           <Title text="Contatos"/>
             <div className="gap-10 mr-12 ml-12  flex flex-col items-center justify-around">
                 <div className="max-w-[650px]  flex flex-col text-center items-center gap-4">
                     <LiaLaptopCodeSolid className="h-24 w-24"/>
