@@ -3,6 +3,6 @@ interface CardTechsProps{
 }
 export default function CardTechs({techs}: CardTechsProps){
     return(
-        <p className="hover:text-gray-600">{techs}</p>
+        <p className="text-gray-600">{techs}</p>
     )
 }

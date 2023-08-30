@@ -17,10 +17,10 @@ interface ProjectCardProps{
 
 export default function ProjectCard({techs, name, purpose, code, deploy, mobileImg, desktopImg, tabletImg }: ProjectCardProps) {
     return (
-      <section className="text-center mt-4 mb-14">
+      <section className="text-center flex flex-col justify-center items-center mt-4 mb-14">
         <Subtitle text={name}/>
         <Purpose purpose={purpose}/>
-        <p className="text-purple-500 mt-4">Technologias utilizadas</p>
+        <p className="text-purple-800 mt-4">Technologias utilizadas</p>
         <ul className="flex gap-1 text-center items-center justify-center">
           {
             techs.map((elem) => {
@@ -30,12 +30,11 @@ export default function ProjectCard({techs, name, purpose, code, deploy, mobileI
             })
           }
         </ul>
-        <div className="mt-8 mb-8 gap-12 flex items-center justify-center">
-          <Button buttonText="Ver código"/>
-          <Button buttonText="Acessar site"/>
-          <Button buttonText="Ver prévia"/>
+        <div className="mt-8 mb-8 gap-8  md:gap-12 flex-col md:flex-row flex items-center justify-center">
+          <Button  buttonText="Ver código"webPage={code}/>
+          <Button buttonText="Acessar site" webPage={deploy}/>
         </div>
-        <Responsivity/>
+        <Responsivity mobileImg={mobileImg} desktopImg={desktopImg} tabletImg={tabletImg}/>
       </section>
     );
   }

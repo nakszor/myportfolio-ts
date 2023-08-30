@@ -3,8 +3,8 @@ interface PurposeProps{
 }
 export default function Purpose({purpose}: PurposeProps){
     return(
-        <div>
-            <p>{purpose}</p>
+        <div className="max-w-[600px] mt-2 text-purple-500 text-center">
+            <p className="w-full">{purpose}</p>
         </div>
     )
 }
